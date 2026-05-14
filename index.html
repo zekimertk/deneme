@@ -642,6 +642,18 @@ function spawnFlower(layer, flowerImages) {
     });
 }
 
+const preloadedFlowerImages = [
+    'flower1.png',
+    'flower2.png',
+    'petal1.png',
+    'petal2.png'
+];
+
+preloadedFlowerImages.forEach(src => {
+    const img = new Image();
+    img.src = src;
+});
+	
 function launchFlowers(){
     const layer = document.getElementById('flower-layer');
     if(!layer) return;
