@@ -331,6 +331,45 @@ h1, h2, h3{
     margin:18px auto 0;
     background:linear-gradient(to right, transparent, rgba(201,161,100,.9), transparent);
 }
+	.scroll-hint{
+    margin-top:34px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    color:rgba(31,55,104,.72);
+    font-size:.72rem;
+    font-weight:600;
+    letter-spacing:2.4px;
+    text-transform:uppercase;
+    animation:scrollHintFade 2.2s ease-in-out infinite;
+}
+
+.scroll-arrow{
+    font-size:1.55rem;
+    line-height:1;
+    color:var(--gold);
+    animation:scrollArrowMove 1.4s ease-in-out infinite;
+}
+
+@keyframes scrollHintFade{
+    0%,100%{
+        opacity:.55;
+    }
+    50%{
+        opacity:1;
+    }
+}
+
+@keyframes scrollArrowMove{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(7px);
+    }
+}
 
 /* PANEL BACKGROUNDS */
 .names-panel{
@@ -509,6 +548,10 @@ h1, h2, h3{
             </div>
 			</div>
             <div class="divider"></div>
+			<div class="scroll-hint">
+				<span>Aşağı kaydırın</span>
+				<div class="scroll-arrow">⌄</div>
+			</div>
         </div>
     </section>
 
